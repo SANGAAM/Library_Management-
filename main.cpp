@@ -87,7 +87,7 @@ if(mysql_query(conn,book.c_str())){
 else{
 	cout<<"Book Inserted Successfuly"<<endl;
 }
- }// if1
+ }
  
  else if(choice==2){
  	system("cls");
@@ -139,7 +139,7 @@ string disp= "SELECT * FROM lib";
  }
 }
 
-//book function
+
 
 int book(MYSQL* conn, string Bname){
 string exist = "SELECT Name, Quantity FROM lib WHERE Name = '" + Bname + "'";
@@ -169,9 +169,7 @@ mysql_free_result(res);
 }//else if exist
 return 0;
 Sleep(5000);
-}//function
-
-// user function
+}
 
 void user(MYSQL* conn, Library l, Student s){
 	system("cls");
@@ -249,7 +247,7 @@ cin>>val;
 if(val==1){
 	system("cls");
 admin(conn,l,s);	
-}//if1 main
+}
 
 else if(val==2){
 user(conn,l,s);
